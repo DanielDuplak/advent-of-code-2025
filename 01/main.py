@@ -19,7 +19,6 @@ def part1(codes):
     return count
 
 print("Part 1:", part1(codes))
-print(50//100)
 
 def part2(codes):
     curr = 50
