@@ -4,8 +4,6 @@ with open('02/input.txt') as f:
     id_ranges = line.split(',')
 
 
-#print(id_ranges)
-
 def part1(id_ranges):
     invalid_ids = set()
     for id_range in id_ranges:
@@ -18,7 +16,7 @@ def part1(id_ranges):
                 invalid_ids.add(curr_id)
     return sum(invalid_ids)
 
-#print("Part 1:", part1(id_ranges))
+print("Part 1:", part1(id_ranges))
 
 def is_duplicate(string, sub_string):
     string_length = len(string)
@@ -41,21 +39,8 @@ def part2(id_ranges):
                 if is_duplicate(str(curr_id), str(curr_id)[0:i+1]):
                     invalid_ids.add(curr_id)
                     break
-                
-                
 
     return sum(invalid_ids)
 
 print("Part 2:", part2(id_ranges))
-
-#a = "123123123123"
-#b = "1234"
-#all_substrs = find_all(a, b)
-#print(len(all_substrs) == 0)
-#print(all_substrs[-1] + len(b) == len(a))
-
-
-#a = "824824823"
-#b = "824"
-#print(is_duplicate(a, b))
 
